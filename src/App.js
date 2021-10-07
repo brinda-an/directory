@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -19,9 +19,9 @@ function App() {
         <h1>Directory</h1>
         <Nav />
         <Switch>
-        <Route path="/view" component={ViewData} />
-        <Route path="/add" component={AddPage} />
-        <Route path="/update/:id" component={UpdatePage} />
+          <Route path="/view" component={ViewData} />
+          <Route path="/add" component={AddPage} />
+          <Route path="/update/:id" component={UpdatePage} />
         </Switch>
         <ToastContainer />
       </div>
